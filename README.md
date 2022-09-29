@@ -1,0 +1,1 @@
+# exempleMinim1DSA
