@@ -1,2 +1,2 @@
-public class ProductManager {
+public interface ProductManager {
 }
