@@ -1,12 +1,15 @@
 package models;
 
 public class Order {
+    List<LP> lps;
     public Order(String s) {
     }
 
-    public void addLP(int i, String b001) {
+    public void addLP(int q, String prod) {
+        this.lps.add(new LP(q,prod));
     }
 
     public Object getLP(int i) {
+        return null;
     }
 }
