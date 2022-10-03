@@ -1,6 +1,5 @@
 import models.Order;
 import models.Product;
-
 import java.util.List;
 
 public class ProductManagerImpl implements ProductManager {
