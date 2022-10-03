@@ -1,7 +1,4 @@
-package edu.upc.eetac.dsa;
-
-import edu.upc.eetac.dsa.models.Order;
-import edu.upc.eetac.dsa.models.Product;
+import models.*;
 
 import java.util.List;
 
