@@ -6,5 +6,6 @@ public class LP {
         }
 
     public int getQuantity() {
+        return 0;
     }
 }
