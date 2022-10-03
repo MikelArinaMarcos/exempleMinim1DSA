@@ -11,8 +11,7 @@ public class Order {
         this.lps.add(new LP(q,prod));
     }
 
-    public Object getLP(int i) {
-
-        return null;
+    public LP getLP(int i) {
+        return this.lps.get(i);
     }
 }
