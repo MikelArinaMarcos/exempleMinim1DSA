@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 public class Order {
     List<LP> lps;
     public Order(String s) {
@@ -10,6 +12,7 @@ public class Order {
     }
 
     public Object getLP(int i) {
+
         return null;
     }
 }
