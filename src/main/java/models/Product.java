@@ -16,4 +16,7 @@ public class Product {
     public String getDescription() {
         return null;
     }
+
+    public void incNumSales(int quantity) {
+    }
 }

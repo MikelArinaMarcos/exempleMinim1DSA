@@ -51,14 +51,35 @@ public class ProductManagerImpl implements ProductManager {
         this.orders.add(order);
     }
 
+
+
     @Override
     public Order processOrder() {
+        Order o = this.orders.poll();
+        String userId = o.getUserId();
+        User user = this.getUser(userId);
+        user.addOrder(o);
+
+        for (order.LP lp: o.lps()){
+            incNumSales(lp.getProductId(), lp.getQuantity());
+        }
+        return o;
+    }
+
+
+    private User getUser(String userId) {
         return null;
+    }
+
+    private void incNumSales (String productId, int quantity){
+        Product product = getProduct(productId);
+        product.incNumSales(quantity);
     }
 
     @Override
     public List<Order> ordersByUser(String userId) {
-        return null;
+        User user = this.users.get(userId);
+        return user.orders();
     }
 
     @Override
@@ -73,7 +94,8 @@ public class ProductManagerImpl implements ProductManager {
 
     @Override
     public Product getProduct(String productId) {
-        return null;
+        Product product = (Product) this.products.stream(), filter(p -> p.getProductId().equals(productId)).findAny().get();
+        return product;
     }
 
     @Override

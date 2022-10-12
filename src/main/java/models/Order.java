@@ -14,4 +14,12 @@ public class Order {
     public LP getLP(int i) {
         return this.lps.get(i);
     }
+
+    public String getUserId() {
+        return null;
+    }
+
+    public LP[] lps() {
+        return new LP[0];
+    }
 }
